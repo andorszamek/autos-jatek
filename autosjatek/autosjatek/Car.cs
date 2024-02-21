@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace autosjatek
         public int PosY { get; private set; }
         public int speed { get; private set; }
         private double acceleration { get; set; }
-
+        public System.Windows.Shapes.Rectangle Rectangle { get; set; }
         public Car(int posX, int posY, int speed, double acceleration)
         {
             PosX = posX;
@@ -26,11 +27,12 @@ namespace autosjatek
         {
             if (fasz)
             {
-                PosX += 20;
+                PosX += 10;
+                 
             }
             else
             {
-                PosX -= 20;
+                PosX -= 10;
             }
         }
     }
